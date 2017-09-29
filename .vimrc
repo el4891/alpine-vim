@@ -51,8 +51,8 @@ set grepprg=/bin/grep\ -nH
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:NERDTreeWinPos = "right"
-let g:NERDTreeWinSize=50
+let g:NERDTreeWinPos = "left"
+let g:NERDTreeWinSize=40
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark 
 map <leader>nf :NERDTreeFind<cr>
@@ -67,7 +67,7 @@ let NERDTreeShowHidden=1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => TagBar
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <F8> :TagbarToggle<CR>
+nmap <leader>tb :TagbarToggle<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -125,8 +125,8 @@ nnoremap <Leader>, :bp<CR>
 " => color and theme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
-colorscheme solarized
-set relativenumber
+"colorscheme solarized
+"set relativenumber
 set number
 
 
@@ -200,3 +200,29 @@ let g:tagbar_type_typescript = {
     \ 'e:enums',
   \ ]
 \ }
+
+
+""add by evan lo
+set autochdir
+set tags=tags;
+
+" 开启实时搜索功能
+set incsearch  
+
+
+" 关闭兼容模式
+set nocompatible
+"
+" " vim 自身命令行模式智能补全
+set wildmenu
+
+" 高亮显示当前行/列
+set cursorline
+" 高亮显示搜索结果
+set hlsearch
+" 禁止折行
+set nowrap
+" 自适应不同语言的智能缩进
+filetype indent on
+
+
