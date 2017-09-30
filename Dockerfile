@@ -140,10 +140,12 @@ RUN cd $UHOME/bundle/ \
     && git clone --depth 1 https://github.com/honza/vim-snippets \
     && git clone --depth 1 https://github.com/derekwyatt/vim-scala \
     && git clone --depth 1 https://github.com/christoomey/vim-tmux-navigator \
-    && git clone --depth 1 https://github.com/ekalinin/Dockerfile.vim \
+    && git clone --depth 1 https://github.com/ekalinin/Dockerfile.vim
 # Theme
-    && git clone --depth 1 \
-    https://github.com/altercation/vim-colors-solarized
+#    && git clone --depth 1 \
+#    https://github.com/altercation/vim-colors-solarized
+RUN mkdir $UHOME/.vim/color
+COPY koehler.vim $UHOME/.vim/color/koehler.vim
     
 # Build default .vimrc
 RUN  mv -f $UHOME/.vimrc $UHOME/.vimrc~ \
